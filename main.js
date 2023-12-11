@@ -1,5 +1,7 @@
 const slides = document.querySelectorAll('.slide-description');
 const sliderImg = document.querySelector('.middle-section-slider-img');
+const hamburger = document.querySelector('.header-hamburger');
+const mainHeader = document.querySelector('.header-main');
 let currentSlide = 0;
 document.addEventListener("DOMContentLoaded", function () {
     autoChangeSlide();
@@ -44,3 +46,9 @@ function selectSlide(index) {
     currentSlide = index;
     showSlide(currentSlide);
 }
+
+
+hamburger.addEventListener('click', () => {
+    mainHeader.classList.toggle('active');
+    hamburger.classList.toggle('cross');
+});
